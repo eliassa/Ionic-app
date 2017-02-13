@@ -2,17 +2,29 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>Pages</ion-title>
+      <ion-title>Meny</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+  <ion-content color="primary">
+    <ion-list >
+      <button ion-item  (click)="openPage(pages[0])">
+        <ion-icon name="home" color="secondary"></ion-icon> {{pages[0].title}}
+      </button>
+      <button ion-item  (click)="openPage(pages[1])">
+        <ion-icon name="camera" color="secondary"></ion-icon> {{pages[1].title}}
+      </button>
+      <button ion-item  (click)="openPage(pages[2])">
+        <ion-icon name="build" color="secondary"></ion-icon> {{pages[2].title}}
+      </button>
+      <button ion-item  (click)="openPage(pages[3])">
+        <ion-icon name="build" color="secondary"></ion-icon> {{pages[3].title}}
       </button>
     </ion-list>
   </ion-content>
 
 </ion-menu>
-<ion-nav [root]="rootPage"></ion-nav>
+
+
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

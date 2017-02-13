@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
-import { CameraPreview, CameraPreviewRect } from 'ionic-native';
+import { Camera, CameraOptions } from 'ionic-native';
 
 /*
   Generated class for the Camera page.
@@ -19,26 +19,21 @@ export class CameraPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    let cameraRect: CameraPreviewRect = {
-      x: 100,
-      y: 100,
-      width: 200,
-      height: 200
-    };
+    let options: CameraOptions = {
+      quality: 100
 
-    let tapEnabled: any = false;
-    let dragEnabled: any = false;
-    let toBack: any = true;
-    let alpha = 1;
+    }
 
-    CameraPreview.startCamera(
-      cameraRect,
-      'rear',
-      tapEnabled,
-      dragEnabled,
-      toBack,
-      alpha
-    );
+
+    Camera.getPicture(options).then((imageData) => {
+ // imageData is either a base64 encoded string or a file URI
+ // If it's base64:
+// let base64Image = 'data:image/jpeg;base64,' + imageData;
+}, (err) => {
+ // Handle error
+});
+
+
 
 
   }

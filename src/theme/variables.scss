@@ -23,25 +23,37 @@ $font-path: "../assets/fonts";
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
 
+$text-colors: #339933;
+
 $colors: (
-  primary:    #3830f5,
-  secondary:  #32db64,
-  danger:     #f53d3d,
+  primary:    #2EDE86,
+  secondary:  #A5EEC9,
+  danger:     #EB7E50,
   light:      #f4f4f4,
   dark:       #222
 );
+
+$list-background-color: color($colors, light);
+
+
+
 
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
-
+$list-ios-activated-background-color: color($colors, primary);
+$item-ios-divider-background: #FFF;
 
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+$item-md-detail-push-show: true;
+$list-md-activated-background-color:color($colors, primary);
+$item-md-divider-background: #FFF;
+
 
 
 
@@ -49,6 +61,7 @@ $colors: (
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
+$item-wp-detail-push-show: true;
 
 
 

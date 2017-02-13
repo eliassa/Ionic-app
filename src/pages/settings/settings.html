@@ -1,0 +1,44 @@
+<!--
+  Generated template for the Settings page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Innstillinger
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-group>
+    <ion-item-divider > Nettverk </ion-item-divider>
+
+    <ion-item>
+      <ion-label>
+        <ion-icon name="plane"></ion-icon>
+         Flymodus
+      </ion-label>
+      <ion-checkbox item-right [(ngModel)]="apMode"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <ion-icon name="wifi"></ion-icon>
+         Wifi
+       </ion-label>
+       <ion-checkbox item-right [(ngModel)]="wifi"></ion-checkbox>
+    </ion-item>
+
+    <ion-item-divider>Annet </ion-item-divider>
+    <a ion-item detail-push href="https://www.ionicframework.com">
+      <ion-icon name="ionitron"></ion-icon> Ionic framework
+    </a>
+  </ion-item-group>
+</ion-content>
